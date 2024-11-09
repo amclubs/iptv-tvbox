@@ -52,6 +52,9 @@ http://cdn.qiaoji8.com/tvbox.json
 - 点击观看[一键部署免费看YouTube、虎牙、斗鱼、YY、抖音、BiliBili直播教程](https://youtu.be/_Yw8gKSL1uY)
 - 点击观看[IPTV直播所有视频教程](https://www.youtube.com/playlist?list=PLGVQi7TjHKXbkozDYVsDRJhbnNaEOC76w)
 
+# 感谢
+[TVBoxOSC](https://github.com/o0HalfLife0o/TVBoxOSC)
+
   # 
  <center><details><summary><strong> [点击展开] 赞赏支持 ~🧧</strong></summary>
  *我非常感谢您的赞赏和支持，它们将极大地激励我继续创新，持续产生有价值的工作。*
