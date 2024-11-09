@@ -1,0 +1,39 @@
+name: Run Tests
+
+on:
+  schedule:
+    - cron: '0 16 */1 * *'
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: compare versions
+        run: |
+          export REMOTEVERSION=$(wget -qO- https://api.github.com/repos/o0HalfLife0o/TVBoxOSC/tags | gawk -F '["v]' '/name/{print "v"$5;exit}')
+          export LOCALVERSION=$(curl --location --silent --fail --show-error "https://api.github.com/repos/amclubs/iptv-tvbox/releases/latest" | grep -oP '"tag_name":\s*"\K[^"]+')
+          bash compare.sh
+          
+      - name: Trigger release
+        if: ${{ env.SYNCED == 0 }}
+        uses: actions/github-script@v6
+        with:
+          github-token: ${{ secrets.PAT_TOKEN }}
+          script: |
+              await github.rest.actions.createWorkflowDispatch({
+              owner: 'amclubs',
+              repo: 'iptv-tvbox',
+              workflow_id: 'build.yml',
+              ref: 'main'
+              })
+              
+      # - name: Delete workflow runs
+      #   if: ${{ env.SYNCED == 1 }}
+      #   uses: Mattraks/delete-workflow-runs@v2
+      #   with:
+      #     token: ${{ github.token }}
+      #     repository: ${{ github.repository }}
+      #     retain_days: 1
+      #     keep_minimum_runs: 8
