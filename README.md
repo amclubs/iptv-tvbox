@@ -11,14 +11,14 @@ TVBox就是一个功能强大的TV追剧神器，你可以查看目标站点资�
 - [点击进入视频教程](https://youtu.be/DzxhUgfAWhI)
 
 # 电影、电视、直播数据源地址(不定时收集更新)
-  
-**1️⃣摸鱼接口**
+
+**1️⃣小盒子4K接口**
 ```
-http://我不是.摸鱼儿.com
+http://xhztv.top/4k.json
 ```
-**2️⃣OK线路**
+**2️⃣采集之王**
 ```
-http://ok321.top/tv
+https://mirror.ghproxy.com/https://raw.githubusercontent.com/jiushizhe/daozhang/main/drpy_dzlive6.21/index.json
 ```
 **3️⃣肥猫线路**
 ```
@@ -43,6 +43,14 @@ https://www.mpanso.com/小米/DEMO.json
 **8️⃣巧技**
 ```
 http://cdn.qiaoji8.com/tvbox.json
+```
+**9️⃣摸鱼接口**
+```
+http://我不是.摸鱼儿.com
+```
+**🔟OK线路**
+```
+http://ok321.top/tv
 ```
 
 - 接口不定时更新，如有失效可在评论区或群反馈。大家如果还有别的更好的接口，也可在评论区留言或群反馈。
